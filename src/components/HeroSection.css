@@ -1,0 +1,30 @@
+.hero-section{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    margin-block: 40px;
+}
+
+.hero-info{
+    flex: 1;
+}
+
+.hero-info h3{
+    font-size: 56px;
+    color: rgb(45, 44, 44);
+}
+
+.hero-info p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: rgb(86, 84, 84);
+}
+
+.hero-img{
+    flex: 1;
+}
+
+.hero-img img{
+    border-radius: 18px;
+}
