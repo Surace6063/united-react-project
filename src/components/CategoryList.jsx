@@ -1,15 +1,8 @@
-import { useEffect } from "react"
-
-// dummy data
-const categories = [
-  { id: 1, name: "clothes" },
-  { id: 2, name: "shoes" },
-  { id: 3, name: "electronics" },
-  { id: 4, name: "cap" },
-  { id: 5, name: "food" }
-]
+import { useEffect, useState } from "react"
 
 const CategoryList = () => {
+    const [categories,setCategories] = useState(null)
+
   useEffect(() => {
     // function to fetch categories from api
     const getCategories = async () => {
@@ -17,8 +10,9 @@ const CategoryList = () => {
         const response = await fetch(
           "https://api.escuelajs.co/api/v1/categories"
         )
-        const data = response.json()
+        const data = await response.json()
         console.log(data)
+        setCategories(data)
       } catch (error) {
         console.log(error)
       }
@@ -29,9 +23,10 @@ const CategoryList = () => {
 
   return (
     <div className="category-list">
-      {categories.map((cat) => (
+      {categories?.slice(0,5)?.map((cat) => (
         <div key={cat.id} className="category-name">
-          {cat.name}
+          <img src={cat.image} alt={cat.name} className="cat-img" /> 
+          <h3>{cat.name}</h3>
         </div>
       ))}
     </div>
