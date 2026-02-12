@@ -37,6 +37,11 @@ img{
     text-align: center;
 }
 
+.cat-img{
+    margin-bottom: 10px;
+    border-radius: 18px;
+}
+
 
 /* home page */
 .category-section{

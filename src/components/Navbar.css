@@ -1,6 +1,8 @@
 .navbar{
    border-bottom: 1px solid lightgray;
    background-color: white;
+   position: sticky;
+   top: 0;
 }
 
 .nav-container{
