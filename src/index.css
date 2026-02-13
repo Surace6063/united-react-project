@@ -9,6 +9,18 @@ img{
     max-width: 100%;
 }
 
+button{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-primary{
+    background-color: darkslategrey;
+    color: white;
+}
+
 .container{
     max-width: 1120px;
     margin-inline: auto;
@@ -55,3 +67,32 @@ img{
     margin-bottom: 16px;
     color: rgb(24, 24, 24);
 }
+
+
+/* product list */
+.product-section{
+    margin-block: 60px;
+}
+
+.product-list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 16px;
+}
+
+.product-img{
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product-title{
+    margin-bottom: 6px;
+    color: rgb(28, 29, 29);
+}
+
+.price{
+    color: rgb(102, 98, 98);
+    margin-bottom: 10px;
+}
+

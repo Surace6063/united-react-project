@@ -28,7 +28,7 @@ const Navbar = () => {
             <button>login</button>
           </Link>
 
-          <button>register</button>
+          <button className="btn-primary">register</button>
         </div>
       </div>
     </header>
