@@ -1,19 +1,10 @@
-import { useQuery } from "@tanstack/react-query"
-import axios from "axios"
+import { useProducts } from "../api/productServices"
 
 const ProductList = () => {
-  const {data:products,isLoading,error} = useQuery({
-    queryKey: ['products'],
-    queryFn: async () => {
-        const response = await axios.get('https://api.escuelajs.co/api/v1/products')
-        return response.data
-    }
-  })
+  const {data:products,isLoading,error} = useProducts()
  
   if(isLoading) return <p>loading...</p>
   if(error) return <p>{error}</p>
-
-  console.log(products)
 
   return (
     <div className="product-list">
