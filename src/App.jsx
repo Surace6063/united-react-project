@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage"
 import ShopPage from "./pages/ShopPage"
 import LoginPage from "./pages/LoginPage"
 import ProductDetailPage from "./pages/ProductDetailPage"
+import Footer from "./components/Footer"
 
 const App = () => {
   return (
@@ -13,8 +14,9 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/product/:id" element={<ProductDetailPage />} />
+        <Route path="/product/:slug" element={<ProductDetailPage />} />
       </Routes>
+      <Footer />
     </div>
   )
 }
